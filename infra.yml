@@ -46,6 +46,7 @@ Resources:
       BlockDeviceMappings:
         - DeviceName: /dev/sdc
           VirtualName: ephemeral0
+    DependsOn: MySecurityGroup
 
   MyLoadBalancer:
     Type: AWS::ElasticLoadBalancing::LoadBalancer

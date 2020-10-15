@@ -1,0 +1,11 @@
+---
+- hosts: all
+  tasks:
+    - name: nginx in the latest version
+      apt: name=nginx state=latest
+      become: yes
+    - name: start nginx
+      service:
+          name: nginx
+          state: started
+      become: yes
